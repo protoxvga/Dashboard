@@ -1,0 +1,60 @@
+{
+    "client": {
+        "host": "test"
+    },
+    "server": {
+        "current_time": 0,
+        "services": [{
+            "name": "spotify",
+            "widgets": [{
+                "name": "followers_count",
+                "description": "Display the number of followers of an artist",
+                "params": [{
+                    "name": "artist",
+                    "type": "string"
+                },{
+                "name": "playlist_count",
+                "description": "Display the number of tracks in a playlist",
+                "params": [{
+                    "name": "playlist",
+                    "type": "string"
+                    }]
+                }]
+            }]
+        }, {
+            "name": "reddit",
+            "widgets": [{
+                "name": "new_posts",
+                "description": "Display the last post of a subreddit",
+                "params": [{
+                    "name": "subreddit",
+                    "type": "string"
+                },{
+                "name": "subscribers_count",
+                "description": "Display the number of subscribers of a subreddit",
+                "params": [{
+                    "name": "subreddit",
+                    "type": "string"
+                    }]
+                }]
+            }]
+        }, {
+            "name": "github",
+            "widgets": [{
+                "name": "account_followers",
+                "description": "Display the number of followers of an account",
+                "params": [{
+                    "name": "github_account",
+                    "type": "string"
+                },{
+                "name": "last_commit",
+                "description": "Display the last commit of a repository",
+                "params": [{
+                    "name": "repository",
+                    "type": "string"
+                    }]
+                }]
+            }]
+        }]
+    }
+}

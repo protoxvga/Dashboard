@@ -1,0 +1,28 @@
+.widgetReddit2 {
+    width: 400px;
+    padding: 20px;
+    height: 325px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #FF5700;
+}
+
+.align {
+    margin: 0 auto;
+}
+
+.align h1 {
+    font-size: 20px;
+    color: #fff;
+}
+
+.align p {
+    font-size: 12px;
+    color: #fff;
+}
+
+.align a {
+    font-size: 12px;
+    color: #fff;
+}

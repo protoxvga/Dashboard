@@ -1,0 +1,42 @@
+version: "3"
+services:
+  server:
+    container_name: server
+    restart: always
+    build: server/.
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app/server
+    links:
+      - mongo
+
+  client:
+    container_name: client
+    restart: always
+    build: client/.
+    volumes:
+      - .:/app/client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
+      
+  mongo:
+    image: mongo:4.2.8
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb:/data/db
+
+  mongo-admin:
+    image: mongo-express
+    ports:
+      - 8081:8081
+    links:
+      - mongo
+    depends_on:
+      - mongo
+
+volumes:
+  mongodb:

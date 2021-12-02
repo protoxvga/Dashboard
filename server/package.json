@@ -1,0 +1,50 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "Dasboard interface in nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EpitechPromo2024/B-DEV-500-NCY-5-1-dashboard-yohann.cormier.git"
+  },
+  "keywords": [
+    "EPITECH",
+    "Dashboard",
+    "nodejs",
+    "reactjs"
+  ],
+  "author": "Pierre Perrin (protoxvga)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EpitechPromo2024/B-DEV-500-NCY-5-1-dashboard-yohann.cormier/issues"
+  },
+  "homepage": "https://github.com/EpitechPromo2024/B-DEV-500-NCY-5-1-dashboard-yohann.cormier#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.16.4",
+    "express-session": "^1.17.2",
+    "github-api": "^3.4.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.19",
+    "passport": "^0.5.0",
+    "passport-github2": "^0.1.12",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-reddit": "^0.2.4",
+    "passport-spotify": "^2.0.0",
+    "passport-youtube-v3": "^2.1.0",
+    "snoowrap": "^1.23.0",
+    "spotify-web-api-node": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
