@@ -39,13 +39,13 @@ export default class Grid extends React.PureComponent {
     super(props);
 
     this.state = {
-      layout: JSON.parse(JSON.stringify(getFromStore("layout")))
+      layout: getFromStore("layout-" + this.props.email) || [{ x: 0, y: 0, w: 3, h: 6, i: ("spotify1" + "-" + getId()) }]
     };
     this.onLayoutChange = this.onLayoutChange.bind(this);
   }
 
   onLayoutChange(layout) {
-    saveToLS("layout", layout);
+    saveToLS("layout-" + this.props.email, layout);
     this.setState({ layout });
     this.props.onLayoutChange(layout);
   }
@@ -89,12 +89,12 @@ export default class Grid extends React.PureComponent {
                   Add Widget
                 </Button>
                 <Menu {...bindMenu(popupState)}>
-                  <MenuItem onClick={() => (this.addNewItem("spotify1"))}>Spotify Widget 1</MenuItem>
-                  <MenuItem onClick={() => (this.addNewItem("spotify2"))}>Spotify Widget 2</MenuItem>
-                  <MenuItem onClick={() => (this.addNewItem("reddit1"))}>Reddit Widget 1</MenuItem>
-                  <MenuItem onClick={() => (this.addNewItem("reddit2"))}>Reddit Widget 2</MenuItem>
-                  <MenuItem onClick={() => (this.addNewItem("github1"))}>Github Widget 1</MenuItem>
-                  <MenuItem onClick={() => (this.addNewItem("github2"))}>Github Widget 2</MenuItem>
+                  <MenuItem onClick={() => (this.addNewItem("spotify1"))}>Spotify Followers</MenuItem>
+                  <MenuItem onClick={() => (this.addNewItem("spotify2"))}>Spotify Playlist</MenuItem>
+                  <MenuItem onClick={() => (this.addNewItem("reddit1"))}>Reddit Last Post</MenuItem>
+                  <MenuItem onClick={() => (this.addNewItem("reddit2"))}>Reddit Subscribers</MenuItem>
+                  <MenuItem onClick={() => (this.addNewItem("github1"))}>Github Followers</MenuItem>
+                  <MenuItem onClick={() => (this.addNewItem("github2"))}>Github Commit</MenuItem>
                 </Menu>
               </React.Fragment>
             )}
@@ -144,9 +144,9 @@ function getFromStore(key) {
   let ls = {};
   if (global.localStorage) {
     try {
-      ls = JSON.parse(global.localStorage.getItem("rgl-7")) || {};
+      ls = JSON.parse(global.localStorage.getItem("rgl-7" + key)) || {};
     } catch (e) {
-      /*Ignore*/
+      console.log(e);
     }
   }
   return ls[key];
@@ -155,7 +155,7 @@ function getFromStore(key) {
 function saveToLS(key, value) {
   if (global.localStorage) {
     global.localStorage.setItem(
-      "rgl-7",
+      "rgl-7" + key,
       JSON.stringify({
         [key]: value
       })

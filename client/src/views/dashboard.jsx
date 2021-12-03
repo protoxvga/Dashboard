@@ -10,10 +10,11 @@ import Button from '@mui/material/Button';
 
 import Grid from './../components/grid';
 
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
+  const email = useSelector((state) => state.email);
   const navigate = useNavigate();
   const dispatch = useDispatch()
 
@@ -44,7 +45,7 @@ const Dashboard = () => {
         </AppBar>
       </Box>
       <div style={{textAlign: 'center'}} >
-        <Grid />
+        <Grid email={email} />
         <Button variant="outlined" style={{marginTop: 20}} color="error" onClick={disconnectHandling}>Disconnect</Button>
       </div>
     </div>

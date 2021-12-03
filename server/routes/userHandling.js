@@ -10,7 +10,7 @@ const check = require("./../src/Checkers");
 module.exports = router.post('/api/user-create', async (req, res) => {
     if (req.body.username == '' || (/\s/.test(req.body.username)))
         res.send({ username: 'ko' });
-    if (req.body.email == '' && req.body.password == '')
+    else if (req.body.email == '' && req.body.password == '')
         res.send({ email: 'ko', password: 'ko' });
     else if (req.body.email == '' && req.body.password != '')
         res.send({ email: 'ko', password: 'ok' });
