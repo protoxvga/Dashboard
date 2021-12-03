@@ -35,38 +35,38 @@ He also build and sync the mongodb image used to store :
 
 We used ReactJS to develop the front end of our application.
 
-Important librairies used : 
-    - **MUI** (Material UI) -> For Design components like buttons or appbar
-    - **react-grid-layout** -> Principal grid of the dashboard
-    - **react-router**      -> To create client part routes (/register - /dashboard - /settings)
-    - **Redux**             -> To store user email easily on client part
-    - **Axios**             -> To do easier requests to server side
-
-Folders description :
-    - public                    ->  Html to call reactjs app
-    - src                       ->  All the Reactjs app
-    - src/views                 ->  All pages classed by file name
-    - src/views/style           ->  All the css files used in views files
-    - src/redux                 ->  Store and Reducer setup
-    - src/components            ->  All the components needed for the client (widgets / grid)
-    - src/components/widgets    ->  All the widgets classed by folder name and then file name
-
+Important librairies used :<br />
+    - **MUI** (Material UI) -> For Design components like buttons or appbar<br />
+    - **react-grid-layout** -> Principal grid of the dashboard<br />
+    - **react-router**      -> To create client part routes (/register - /dashboard - /settings)<br />
+    - **Redux**             -> To store user email easily on client part<br />
+    - **Axios**             -> To do easier requests to server side<br />
+<br /><br />
+Folders description :<br />
+    - public                    ->  Html to call reactjs app<br />
+    - src                       ->  All the Reactjs app<br />
+    - src/views                 ->  All pages classed by file name<br />
+    - src/views/style           ->  All the css files used in views files<br />
+    - src/redux                 ->  Store and Reducer setup<br />
+    - src/components            ->  All the components needed for the client (widgets / grid)<br />
+    - src/components/widgets    ->  All the widgets classed by folder name and then file name<br />
+<br />
 ## **Back-end**
 
 We used NodeJS / Express to develop the back-end of our application.
 
-Important librairies used : 
-    - **Dotenv**        -> To store api client_id and client_secret keys
-    - **PassportJS**    -> To make 2OAuth authentifications with the services (Github / Spotify / Reddit / Google)
-    - **bcryptjs**      -> To encrypt password in the database when creating users
-    - **Snoowrap / github-api / spotify-web-api-node** -> Easier api calls and exceptions gesture to the different services
-
-Folders description :
-    - db            ->  Db creation and connection gesture
-    - db/models     ->  User model setup
-    - files         ->  about.json default file
-    - routes        ->  All back-end routes used for the project
-    - routes/api    ->  Routes for api calls 
-    - routes/auth   ->  Routes for passport OAuth with the services
-    - src           ->  Little usable function
+Important librairies used :<br />
+    - **Dotenv**        -> To store api client_id and client_secret keys<br />
+    - **PassportJS**    -> To make 2OAuth authentifications with the services (Github / Spotify / Reddit / Google)<br />
+    - **bcryptjs**      -> To encrypt password in the database when creating users<br />
+    - **Snoowrap / github-api / spotify-web-api-node** -> Easier api calls and exceptions gesture to the different services<br />
+<br /><br />
+Folders description :<br />
+    - db            ->  Db creation and connection gesture<br />
+    - db/models     ->  User model setup<br />
+    - files         ->  about.json default file<br />
+    - routes        ->  All back-end routes used for the project<br />
+    - routes/api    ->  Routes for api calls <br />
+    - routes/auth   ->  Routes for passport OAuth with the services<br />
+    - src           ->  Little usable function<br />
 
