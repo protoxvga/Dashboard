@@ -68,7 +68,7 @@ app.post('/api/spotify/album', spotifyApi);
 //github oauth setup
 
 app.get('/auth/github', githubOauth);
-app.get('/auth/spotify/github', githubOauth);
+app.get('/auth/github/callback', githubOauth);
 
 //github Api
 

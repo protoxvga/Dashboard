@@ -39,7 +39,7 @@ export default class Grid extends React.PureComponent {
     super(props);
 
     this.state = {
-      layout: getFromStore("layout-" + this.props.email) || [{ x: 0, y: 0, w: 3, h: 6, i: ("spotify1" + "-" + getId()) }]
+      layout: getFromStore("layout-" + this.props.email) || [{ x: 0, y: 0, w: 3, h: 3, i: ("spotify1" + "-" + getId()) }]
     };
     this.onLayoutChange = this.onLayoutChange.bind(this);
   }
